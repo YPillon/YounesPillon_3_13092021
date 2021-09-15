@@ -1,0 +1,105 @@
+@import "./utils/variables";
+@import "./base/base";
+@import "./components/composants";
+@import "./layouts/layouts";
+@import "./pages/pages";
+
+.restos {
+  padding: 7rem 2rem;
+  background-color: $color-fond;
+  h2 {
+    margin-bottom: 3.3rem;
+  }
+  &__vignette {
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: $shadow;
+    &__img {
+      width: 100%;
+      height: 20rem;
+      overflow: hidden;
+      background-size: cover;
+      background-position: bottom;
+      position: relative;
+      p {
+        display: inline-block;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        padding: 0.7rem 1.4rem;
+        background-color: $color-3;
+        font-size: 1.8rem;
+        color: darken($color-3, 40%);
+        border-radius: 0.3rem;
+      }
+    }
+    &__palette {
+      background-image: url(../images/restaurants/palette_du_gout.jpg);
+    }
+    &__note {
+      background-image: url(../images/restaurants/note_enchantee.jpg);
+      background-position: center 61%;
+    }
+    &__francaise {
+      background-image: url(../images/restaurants/a_la_francaise.jpg);
+    }
+    &__delice {
+      background-image: url(../images/restaurants/delice_des_sens.jpg);
+    }
+    &__desc {
+      background-color: white;
+      padding: 2rem 0 2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-size: 2.2rem;
+        margin-bottom: 0.4rem;
+      }
+      p {
+        font-size: 2.2rem;
+      }
+      .fa-heart {
+        font-size: 3rem;
+      }
+    }
+    &__coeur {
+      padding-right: 3rem;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+a:not(:last-child) .restos__vignette {
+  margin-bottom: 2rem;
+}
+
+footer {
+  padding: 3rem;
+  background-color: #353535;
+  color: white;
+  img {
+    filter: invert(100%);
+    width: 12rem;
+    height: auto;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: $small;
+    li {
+      font-size: $small;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+    .fas {
+      padding-right: 2rem;
+    }
+    .fa-utensils {
+      font-size: 1.5rem;
+    }
+    .fa-hands-helping {
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/*Page d'accueil*/
+
+.localisation {
+  height: 6rem;
+  width: 100%;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: rgb(37, 37, 37);
+  .fas {
+    position: relative;
+    right: 1.9rem;
+  }
+}
+
+.en-tete {
+    height: 20rem;
+    padding: 4rem 0 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-fond;
+    h2 {
+      padding: 0 7rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .fonctionnement {
+    padding: 7rem 2rem 7rem 3rem;
+    h2 {
+      margin-bottom: 4rem;
+      margin-left: -1rem;
+    }
+    &__vignette {
+      font-size: $small;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 9rem;
+      background-color: $color-fond;
+      border-radius: 2.5rem;
+      box-shadow: $shadow;
+      position: relative;
+      &:last-child .fas {
+        color: $color-1;
+      }
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+      .fas {
+        font-size: 2.5rem;
+        color: rgb(78, 77, 77);
+        padding-right: 3rem;
+      }
+      .bold {
+        padding-right: 6rem;
+      }
+      .number {
+        padding: 0.4rem 0.9rem;
+        background-color: #9356dc;
+        color: white;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+        position: absolute;
+        left: -1.3rem;
+      }
+    }
+  }

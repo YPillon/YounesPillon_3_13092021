@@ -1,0 +1,237 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Roboto-medium";
+  src: url(../fonts/roboto/Roboto-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto-light";
+  src: url(../fonts/roboto/Roboto-Light.ttf) format("truetype");
+}
+* {
+  font-family: "Roboto-light";
+}
+
+.bold, h2, .btn, .number {
+  font-family: "Roboto-medium";
+}
+
+h2, h3, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.9rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.btn {
+  height: auto;
+  width: fit-content;
+  padding: 1.8rem 2.5rem;
+  border-radius: 3rem;
+  background-color: #9356DC;
+  font-size: 2rem;
+  color: white;
+  border: transparent;
+}
+
+header {
+  height: 7.5rem;
+  text-align: center;
+  box-shadow: 2px 2px 4px #c3c3c3;
+}
+header img {
+  width: 18rem;
+  margin-top: 3rem;
+}
+
+/*Page d'accueil*/
+.localisation {
+  height: 6rem;
+  width: 100%;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #252525;
+}
+.localisation .fas {
+  position: relative;
+  right: 1.9rem;
+}
+
+.en-tete {
+  height: 20rem;
+  padding: 4rem 0 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.en-tete h2 {
+  padding: 0 7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.en-tete p {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.fonctionnement {
+  padding: 7rem 2rem 7rem 3rem;
+}
+.fonctionnement h2 {
+  margin-bottom: 4rem;
+  margin-left: -1rem;
+}
+.fonctionnement__vignette {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 9rem;
+  background-color: #f6f6f6;
+  border-radius: 2.5rem;
+  box-shadow: 2px 1px 10px #c3c3c3;
+  position: relative;
+}
+.fonctionnement__vignette:last-child .fas {
+  color: #9356DC;
+}
+.fonctionnement__vignette:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.fonctionnement__vignette .fas {
+  font-size: 2.5rem;
+  color: #4e4d4d;
+  padding-right: 3rem;
+}
+.fonctionnement__vignette .bold {
+  padding-right: 6rem;
+}
+.fonctionnement__vignette .number {
+  padding: 0.4rem 0.9rem;
+  background-color: #9356dc;
+  color: white;
+  border-radius: 5rem;
+  font-size: 1.7rem;
+  position: absolute;
+  left: -1.3rem;
+}
+
+.restos {
+  padding: 7rem 2rem;
+  background-color: #f6f6f6;
+}
+.restos h2 {
+  margin-bottom: 3.3rem;
+}
+.restos__vignette {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 2px 1px 10px #c3c3c3;
+}
+.restos__vignette__img {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+.restos__vignette__img p {
+  display: inline-block;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  background-color: #99E2D0;
+  font-size: 1.8rem;
+  color: #278870;
+  border-radius: 0.3rem;
+}
+.restos__vignette__palette {
+  background-image: url(../images/restaurants/palette_du_gout.jpg);
+}
+.restos__vignette__note {
+  background-image: url(../images/restaurants/note_enchantee.jpg);
+  background-position: center 61%;
+}
+.restos__vignette__francaise {
+  background-image: url(../images/restaurants/a_la_francaise.jpg);
+}
+.restos__vignette__delice {
+  background-image: url(../images/restaurants/delice_des_sens.jpg);
+}
+.restos__vignette__desc {
+  background-color: white;
+  padding: 2rem 0 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.restos__vignette__desc h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+.restos__vignette__desc p {
+  font-size: 2.2rem;
+}
+.restos__vignette__desc .fa-heart {
+  font-size: 3rem;
+}
+.restos__vignette__coeur {
+  padding-right: 3rem;
+  padding-top: 0.5rem;
+}
+
+a:not(:last-child) .restos__vignette {
+  margin-bottom: 2rem;
+}
+
+footer {
+  padding: 3rem;
+  background-color: #353535;
+  color: white;
+}
+footer img {
+  filter: invert(100%);
+  width: 12rem;
+  height: auto;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 2rem;
+}
+footer ul li {
+  font-size: 2rem;
+}
+footer ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+footer ul .fas {
+  padding-right: 2rem;
+}
+footer ul .fa-utensils {
+  font-size: 1.5rem;
+}
+footer ul .fa-hands-helping {
+  font-size: 1.1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
