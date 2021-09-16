@@ -1,9 +1,52 @@
 header {
-    height: 7.5rem;
-    text-align: center;
+  height: 7rem;
+  text-align: center;
+  position: relative;
+  background: white;
+  img {
+    width: 19rem;
+    margin-top: 2.3rem;
+  }
+  &.shadow {
     box-shadow: 2px 2px 4px $color-shadow;
-    img {
-      width: 18rem;
-      margin-top: 3rem;
+  }
+  .btn-retour {
+    position: absolute;
+    left: 2.6rem;
+    top: 2.5rem;
+    background: transparent;
+    border: none;
+    font-size: 2.2rem;
+  }
+}
+
+footer {
+  padding: 3rem;
+  background-color: #353535;
+  color: white;
+  img {
+    filter: invert(100%);
+    width: 12rem;
+    height: auto;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: $small;
+    li {
+      font-size: $small;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+    .fas {
+      padding-right: 2rem;
+    }
+    .fa-utensils {
+      font-size: 1.5rem;
+    }
+    .fa-hands-helping {
+      font-size: 1.1rem;
     }
   }
+}

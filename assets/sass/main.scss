@@ -4,102 +4,87 @@
 @import "./layouts/layouts";
 @import "./pages/pages";
 
-.restos {
-  padding: 7rem 2rem;
-  background-color: $color-fond;
-  h2 {
-    margin-bottom: 3.3rem;
+.img-princ {
+  height: 30rem;
+  &--palette {
+    background-image: url(../images/restaurants/palette_du_gout.jpg);
+    background-size: 110%;
+    background-position: top;
   }
-  &__vignette {
-    border-radius: 2rem;
-    overflow: hidden;
+  &--note {
+    background-image: url(../images/restaurants/note_enchantee.jpg);
+    background-size: cover;
+    background-position: center 45%;
+  }
+  &--francaise {
+    background-image: url(../images/restaurants/a_la_francaise.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  &--delice {
+    background-image: url(../images/restaurants/delice_des_sens.jpg);
+    background-size: 105%;
+    background-position: top;
+  }
+}
+
+.menu {
+  background-color: $color-fond;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  padding: 3.5rem 2rem 2rem;
+  position: relative;
+  bottom: 4.5rem;
+  &__titre {
+    display: flex;
+    justify-content: space-between;
+    .far {
+      font-size: 2.9rem;
+      padding-right: 2rem;
+      padding-top: 0.7rem;
+    }
+  }
+  &__assortiment h4 {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.9rem;
+    margin-bottom: 3rem;
+    margin-top: 3.5rem;
+  }
+  &__plat {
+    height: 5rem;
+    padding: 1.4rem 2.7rem 1.4rem 1.2rem;
+    border-radius: 1.7rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
     box-shadow: $shadow;
-    &__img {
-      width: 100%;
-      height: 20rem;
-      overflow: hidden;
-      background-size: cover;
-      background-position: bottom;
-      position: relative;
-      p {
-        display: inline-block;
-        position: absolute;
-        right: 1.5rem;
-        top: 1.5rem;
-        padding: 0.7rem 1.4rem;
-        background-color: $color-3;
-        font-size: 1.8rem;
-        color: darken($color-3, 40%);
-        border-radius: 0.3rem;
-      }
+    &:not(:last-child) {
+      margin-bottom: 2rem;
     }
-    &__palette {
-      background-image: url(../images/restaurants/palette_du_gout.jpg);
+    &--taille1 {
+      font-size: $small;
+      font-family: "Roboto-medium";
     }
-    &__note {
-      background-image: url(../images/restaurants/note_enchantee.jpg);
-      background-position: center 61%;
+    &--taille2 {
+      font-size: 1.7rem;
     }
-    &__francaise {
-      background-image: url(../images/restaurants/a_la_francaise.jpg);
+    span:nth-child(2) {
+      font-size: 1.8rem;
+      font-family: "Roboto-medium";
+      font-weight: bold;
     }
-    &__delice {
-      background-image: url(../images/restaurants/delice_des_sens.jpg);
-    }
-    &__desc {
-      background-color: white;
-      padding: 2rem 0 2rem 1.5rem;
+    div {
       display: flex;
       justify-content: space-between;
-      h3 {
-        font-size: 2.2rem;
-        margin-bottom: 0.4rem;
-      }
-      p {
-        font-size: 2.2rem;
-      }
-      .fa-heart {
-        font-size: 3rem;
-      }
-    }
-    &__coeur {
-      padding-right: 3rem;
-      padding-top: 0.5rem;
     }
   }
-}
-
-a:not(:last-child) .restos__vignette {
-  margin-bottom: 2rem;
-}
-
-footer {
-  padding: 3rem;
-  background-color: #353535;
-  color: white;
-  img {
-    filter: invert(100%);
-    width: 12rem;
-    height: auto;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: $small;
-    li {
-      font-size: $small;
-      &:not(:last-child) {
-        margin-bottom: 1rem;
-      }
-    }
-    .fas {
-      padding-right: 2rem;
-    }
-    .fa-utensils {
-      font-size: 1.5rem;
-    }
-    .fa-hands-helping {
-      font-size: 1.1rem;
-    }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 5.5rem;
   }
 }

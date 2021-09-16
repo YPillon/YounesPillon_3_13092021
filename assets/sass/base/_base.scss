@@ -4,6 +4,7 @@ html {
 
 body {
     margin:0;
+    background-color: $color-fond;
 }
 
 @font-face {
@@ -16,6 +17,11 @@ body {
     src: url(../fonts/roboto/Roboto-Light.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "Shrikhand";
+    src: url(../fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
+}
+
 * {
     font-family: "Roboto-light";
 }
@@ -24,7 +30,12 @@ body {
     font-family: "Roboto-medium";
 }
 
-h2, h3, p {
+h1 {
+    font-family: "Shrikhand";
+    font-size: 3.2rem;
+}
+
+h1, h2, h3, h4, p {
     margin:0;
 }
 

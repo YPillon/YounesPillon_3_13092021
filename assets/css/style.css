@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  background-color: #f6f6f6;
 }
 
 @font-face {
@@ -14,6 +15,10 @@ body {
   font-family: "Roboto-light";
   src: url(../fonts/roboto/Roboto-Light.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
+}
 * {
   font-family: "Roboto-light";
 }
@@ -22,7 +27,12 @@ body {
   font-family: "Roboto-medium";
 }
 
-h2, h3, p {
+h1 {
+  font-family: "Shrikhand";
+  font-size: 3.2rem;
+}
+
+h1, h2, h3, h4, p {
   margin: 0;
 }
 
@@ -47,13 +57,56 @@ a {
 }
 
 header {
-  height: 7.5rem;
+  height: 7rem;
   text-align: center;
-  box-shadow: 2px 2px 4px #c3c3c3;
+  position: relative;
+  background: white;
 }
 header img {
-  width: 18rem;
-  margin-top: 3rem;
+  width: 19rem;
+  margin-top: 2.3rem;
+}
+header.shadow {
+  box-shadow: 2px 2px 4px #c3c3c3;
+}
+header .btn-retour {
+  position: absolute;
+  left: 2.6rem;
+  top: 2.5rem;
+  background: transparent;
+  border: none;
+  font-size: 2.2rem;
+}
+
+footer {
+  padding: 3rem;
+  background-color: #353535;
+  color: white;
+}
+footer img {
+  filter: invert(100%);
+  width: 12rem;
+  height: auto;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 2rem;
+}
+footer ul li {
+  font-size: 2rem;
+}
+footer ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+footer ul .fas {
+  padding-right: 2rem;
+}
+footer ul .fa-utensils {
+  font-size: 1.5rem;
+}
+footer ul .fa-hands-helping {
+  font-size: 1.1rem;
 }
 
 /*Page d'accueil*/
@@ -93,6 +146,7 @@ header img {
 
 .fonctionnement {
   padding: 7rem 2rem 7rem 3rem;
+  background: white;
 }
 .fonctionnement h2 {
   margin-bottom: 4rem;
@@ -203,35 +257,89 @@ a:not(:last-child) .restos__vignette {
   margin-bottom: 2rem;
 }
 
-footer {
-  padding: 3rem;
-  background-color: #353535;
-  color: white;
+.img-princ {
+  height: 30rem;
 }
-footer img {
-  filter: invert(100%);
-  width: 12rem;
-  height: auto;
+.img-princ--palette {
+  background-image: url(../images/restaurants/palette_du_gout.jpg);
+  background-size: 110%;
+  background-position: top;
 }
-footer ul {
-  list-style-type: none;
-  padding: 0;
-  font-size: 2rem;
+.img-princ--note {
+  background-image: url(../images/restaurants/note_enchantee.jpg);
+  background-size: cover;
+  background-position: center 45%;
 }
-footer ul li {
-  font-size: 2rem;
+.img-princ--francaise {
+  background-image: url(../images/restaurants/a_la_francaise.jpg);
+  background-size: cover;
+  background-position: center;
 }
-footer ul li:not(:last-child) {
-  margin-bottom: 1rem;
+.img-princ--delice {
+  background-image: url(../images/restaurants/delice_des_sens.jpg);
+  background-size: 105%;
+  background-position: top;
 }
-footer ul .fas {
+
+.menu {
+  background-color: #f6f6f6;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  padding: 3.5rem 2rem 2rem;
+  position: relative;
+  bottom: 4.5rem;
+}
+.menu__titre {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__titre .far {
+  font-size: 2.9rem;
   padding-right: 2rem;
+  padding-top: 0.7rem;
 }
-footer ul .fa-utensils {
-  font-size: 1.5rem;
+.menu__assortiment h4 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.9rem;
+  margin-bottom: 3rem;
+  margin-top: 3.5rem;
 }
-footer ul .fa-hands-helping {
-  font-size: 1.1rem;
+.menu__plat {
+  height: 5rem;
+  padding: 1.4rem 2.7rem 1.4rem 1.2rem;
+  border-radius: 1.7rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 1px 10px #c3c3c3;
+}
+.menu__plat:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.menu__plat--taille1 {
+  font-size: 2rem;
+  font-family: "Roboto-medium";
+}
+.menu__plat--taille2 {
+  font-size: 1.7rem;
+}
+.menu__plat span:nth-child(2) {
+  font-size: 1.8rem;
+  font-family: "Roboto-medium";
+  font-weight: bold;
+}
+.menu__plat div {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 5.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
