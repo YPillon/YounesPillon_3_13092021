@@ -3,8 +3,37 @@
   width: fit-content;
   padding: 1.8rem 2.5rem;
   border-radius: 3rem;
-  background-color: $color-1;
+  background: linear-gradient(to bottom right, $color-2, $color-1);
   font-size: $small;
   color: white;
   border: transparent;
+  box-shadow: $shadow;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    & .btn__bg {
+      opacity: 1;
+    }
+  }
+  &__bg {
+    background: linear-gradient(
+        to bottom right,
+        lighten($color-2, 5%),
+        lighten($color-1, 5%)
+      );
+    box-shadow: 4px 4px 10px $color-shadow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 3rem;
+    transition: opacity 250ms ease-in-out;
+  }
+}
+
+#btn-commander {
+  padding: 1.8rem 5.5rem;
 }

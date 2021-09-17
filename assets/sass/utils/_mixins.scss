@@ -1,0 +1,19 @@
+@keyframes plat {
+    0% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+
+   /* 20% {
+        transform: translateY(10rem);
+    }
+
+    90% {
+        opacity: 1;
+    }*/
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
