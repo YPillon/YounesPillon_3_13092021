@@ -109,17 +109,19 @@ footer {
   }
   &__plat {
     height: 5rem;
+    width: auto;
     padding: 1.4rem 2.7rem 1.4rem 1.2rem;
     border-radius: 1.7rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
     box-shadow: $shadow;
-    animation: plat $anim-dur cubic-bezier(0,0,.42,.99);
+    animation: plat $anim-dur cubic-bezier(0, 0, 0.42, 0.99);
     animation-fill-mode: both;
+    cursor: pointer;
     @for $i from 1 through $num-plat {
       &--num#{$i} {
         animation-delay: $anim-delay * $i;
@@ -131,18 +133,70 @@ footer {
     &--taille1 {
       font-size: $small;
       font-family: "Roboto-medium";
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
     &--taille2 {
       font-size: 1.7rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
     span:nth-child(2) {
       font-size: 1.8rem;
       font-family: "Roboto-medium";
       font-weight: bold;
+      margin-left: 1.3rem;
     }
     div {
       display: flex;
       justify-content: space-between;
+    }
+    &--selection {
+      width: 20%;
+      height: 100%;
+      background-color: $color-3;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+    }
+    &--decalage {
+      display: inline-block;
+      transform-origin: left;
+    }
+    &:active,
+    &:hover {
+      animation: decalage $anim-dur both;
+      /*.menu__plat--decalage {
+        animation: decalage $anim-dur both;
+      }*/
+      .menu__plat--selection {
+        animation: coche $anim-dur both;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: white;
+      }
+      i {
+        animation: rotation $anim-dur both;
+      }
+    }
+    &:not(:hover) {
+      animation: decalage-retour $anim-dur $anim-delay both;
+      .menu__plat--selection {
+        animation: coche-retour $anim-dur $anim-delay both;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: white;
+      }
+      /*.menu__plat--decalage {
+        animation: decalage-retour $anim-dur $anim-delay both;
+      }*/
     }
   }
   &__btn {

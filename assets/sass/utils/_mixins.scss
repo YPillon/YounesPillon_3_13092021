@@ -1,19 +1,72 @@
 @keyframes plat {
-    0% {
-        transform: translateY(3rem);
-        opacity: 0;
-    }
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-   /* 20% {
-        transform: translateY(10rem);
-    }
+@keyframes coche {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 
-    90% {
-        opacity: 1;
-    }*/
+@keyframes coche-retour {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+@keyframes rotation {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes no-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes decalage {
+  0% {
+    padding-right: 2.7rem;
+  }
+  100% {
+    padding-right: 25%;
+  }
+}
+
+@keyframes decalage-retour {
+  0% {
+    padding-right: 25%;
+  }
+  100% {
+    padding-right: 02.7rem;
+  }
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
