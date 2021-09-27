@@ -66,11 +66,16 @@
   }
 }
 @keyframes loader {
-  0%, 80% {
+  0%, 60% {
     opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(0);
   }
   100% {
-    opacity: 0;
+    transform: translateX(5000px);
   }
 }
 @keyframes scale {
@@ -381,7 +386,7 @@ footer ul .fa-hands-helping {
   height: 100%;
   z-index: 5;
   position: fixed;
-  animation: loader 3s forwards;
+  animation: loader 3s both;
   display: flex;
   justify-content: center;
   align-items: center;
