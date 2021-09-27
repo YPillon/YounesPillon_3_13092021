@@ -57,6 +57,14 @@
     padding-right: 2.7rem;
   }
 }
+@keyframes coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -233,6 +241,10 @@ footer ul .fa-hands-helping {
   padding-right: 2rem;
   padding-top: 0.7rem;
 }
+.menu__titre #coeur_couleur {
+  bottom: 1rem;
+  right: -0.2rem;
+}
 .menu__assortiment h4 {
   text-transform: uppercase;
   font-weight: lighter;
@@ -261,8 +273,7 @@ footer ul .fa-hands-helping {
   position: relative;
   overflow: hidden;
   box-shadow: 2px 2px 10px #c3c3c3;
-  animation: plat 600ms cubic-bezier(0, 0, 0.42, 0.99);
-  animation-fill-mode: both;
+  animation: plat 600ms cubic-bezier(0, 0, 0.42, 0.99) both;
   cursor: pointer;
 }
 .menu__plat--num1 {
@@ -318,9 +329,6 @@ footer ul .fa-hands-helping {
 }
 .menu__plat:active, .menu__plat:hover {
   animation: decalage 600ms both;
-  /*.menu__plat--decalage {
-    animation: decalage $anim-dur both;
-  }*/
 }
 .menu__plat:active .menu__plat--selection, .menu__plat:hover .menu__plat--selection {
   animation: coche 600ms both;
@@ -335,9 +343,6 @@ footer ul .fa-hands-helping {
 }
 .menu__plat:not(:hover) {
   animation: decalage-retour 600ms 200ms both;
-  /*.menu__plat--decalage {
-    animation: decalage-retour $anim-dur $anim-delay both;
-  }*/
 }
 .menu__plat:not(:hover) .menu__plat--selection {
   animation: coche-retour 600ms 200ms both;
@@ -354,12 +359,12 @@ footer ul .fa-hands-helping {
 }
 
 /*Page d'accueil*/
-.loader {
-  background: red;
+.load {
+  background-color: red;
   width: 100%;
   height: 100%;
+  z-index: 5;
   position: fixed;
-  z-index: -1;
 }
 
 .localisation {
@@ -416,6 +421,11 @@ footer ul .fa-hands-helping {
   box-shadow: 2px 2px 10px #c3c3c3;
   position: relative;
 }
+@media screen and (min-width: 1200px) {
+  .fonctionnement__vignette {
+    width: 30%;
+  }
+}
 .fonctionnement__vignette:last-child .fas {
   color: #9356DC;
 }
@@ -432,7 +442,7 @@ footer ul .fa-hands-helping {
 }
 .fonctionnement__vignette .number {
   padding: 0.4rem 0.9rem;
-  background-color: #9356dc;
+  background-color: #9356DC;
   color: white;
   border-radius: 5rem;
   font-size: 1.7rem;
@@ -440,6 +450,21 @@ footer ul .fa-hands-helping {
   left: -1.3rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .fonctionnement__cases {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*.restos {
+    &__cases {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    /*&__vignette {
+      width: 100%;
+    }*/
+}
 .restos {
   padding: 7rem 2rem;
   background-color: #f6f6f6;
@@ -486,7 +511,7 @@ footer ul .fa-hands-helping {
 }
 .restos__vignette__desc {
   background-color: white;
-  padding: 2rem 0 2rem 1.5rem;
+  padding: 2rem 3.5rem 2rem 1.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -504,26 +529,31 @@ footer ul .fa-hands-helping {
 .restos__vignette__coeur {
   position: relative;
 }
+.restos__vignette__coeur i:nth-child(2) {
+  font-weight: bold;
+  font-size: 3.3rem;
+}
 .restos__vignette__coeur--bg {
   background: linear-gradient(to top, #FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  top: 0;
-  right: 0;
-}
-.restos__vignette__coeur--bg .fa-heart {
+  bottom: 2.3rem;
+  right: -0.1rem;
   font-weight: bold;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 600ms;
+}
+.restos__vignette__coeur--bg:hover, .restos__vignette__coeur--bg:active {
+  opacity: 1;
 }
 
 a:not(:last-child) .restos__vignette {
   margin-bottom: 2rem;
 }
 
-/*h3 {
-  background: linear-gradient($color-2, $color-1);
-  background-clip: text;
-}*/
 /*.loader {
   height: 100%;
   width: 100%;

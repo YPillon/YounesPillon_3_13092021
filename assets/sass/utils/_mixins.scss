@@ -59,14 +59,15 @@
     padding-right: 25%;
   }
   100% {
-    padding-right: 02.7rem;
+    padding-right: 2.7rem;
   }
 }
 
-@mixin absolute {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+@keyframes coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
