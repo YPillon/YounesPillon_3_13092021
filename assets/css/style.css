@@ -65,6 +65,22 @@
     opacity: 1;
   }
 }
+@keyframes loader {
+  0%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -360,11 +376,20 @@ footer ul .fa-hands-helping {
 
 /*Page d'accueil*/
 .load {
-  background-color: red;
+  background-color: white;
   width: 100%;
   height: 100%;
   z-index: 5;
   position: fixed;
+  animation: loader 3s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load .fa-utensils {
+  color: #9356DC;
+  font-size: 7rem;
+  animation: scale 450ms ease-in-out infinite alternate-reverse;
 }
 
 .localisation {
@@ -450,20 +475,23 @@ footer ul .fa-hands-helping {
   left: -1.3rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .fonctionnement__cases {
     display: flex;
     justify-content: space-between;
   }
 
-  /*.restos {
-    &__cases {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    /*&__vignette {
-      width: 100%;
-    }*/
+  .restos__cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restos a {
+    width: 49%;
+  }
+  .restos__vignette {
+    width: 100%;
+  }
 }
 .restos {
   padding: 7rem 2rem;

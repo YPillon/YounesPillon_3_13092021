@@ -1,11 +1,20 @@
 /*Page d'accueil*/
 
 .load {
-  background-color: red;
+  background-color: white;
   width: 100%;
   height: 100%;
   z-index: 5;
   position: fixed;
+  animation: loader 3s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fa-utensils {
+    color: $color-1;
+    font-size: 7rem;
+    animation: scale 450ms ease-in-out infinite alternate-reverse;
+  }
 }
 
 .localisation {
@@ -88,20 +97,25 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .fonctionnement__cases {
     display: flex;
     justify-content: space-between;
   }
-  /*.restos {
+  .restos {
     &__cases {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
-    /*&__vignette {
+    a {
+      width: 49%;
+    }
+    &__vignette {
       width: 100%;
-    }*/
+    }
   }
+}
 
 
 .restos {
