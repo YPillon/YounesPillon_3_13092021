@@ -104,6 +104,19 @@ footer {
   padding: 3.5rem 2rem 2rem;
   position: relative;
   bottom: 4.5rem;
+  @media screen and (min-width:$big-screen) {
+    &__cases {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__assortiment {
+      width: 48%;
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
   &__titre {
     display: flex;
     justify-content: space-between;

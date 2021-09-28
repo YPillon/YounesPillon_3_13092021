@@ -69,8 +69,11 @@
     border-radius: 2.5rem;
     box-shadow: $shadow;
     position: relative;
-    &:last-child .fas {
-      color: $color-1;
+    &:last-child {
+      background-color: #ff79d933;
+      .fas {
+        color: $color-1;
+      }
     }
     &:not(:last-child) {
       margin-bottom: 3rem;
@@ -95,13 +98,6 @@
   }
 }
 @media screen and (min-width: $big-screen) {
-  /*.fonctionnement__cases {
-    display: flex;
-    justify-content: space-between;
-    .fonctionnement__vignette {
-      width: 30%;
-    }
-  }*/
   .restos {
     &__cases {
       display: flex;
