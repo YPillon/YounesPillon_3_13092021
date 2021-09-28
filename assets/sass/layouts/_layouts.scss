@@ -24,6 +24,9 @@ footer {
   padding: 3rem;
   background-color: #353535;
   color: white;
+  a {
+    color: white;
+  }
   img {
     filter: invert(100%);
     width: 12rem;
@@ -74,6 +77,25 @@ footer {
     background-position: top;
   }
 }
+@media screen and (min-width:$big-screen) {
+  .img-princ {
+    height: 40rem;
+    &--palette {
+      background-size: 100%;
+      background-position: center;
+    }
+    &--note {
+      background-position: center 60%;
+    }
+    &--francaise {
+      background-position: center 65%;
+    }
+    &--delice {
+      background-size: cover;
+      background-position: center 80%;
+    }
+  }
+}
 
 .menu {
   background-color: $color-fond;
@@ -112,22 +134,56 @@ footer {
     }
   }
   &__plat {
-    height: 5rem;
     width: auto;
-    padding: 1.4rem 2.7rem 1.4rem 1.2rem;
     border-radius: 1.7rem;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
     box-shadow: $shadow;
     animation: plat $anim-dur cubic-bezier(0, 0, 0.42, 0.99) both;
     cursor: pointer;
     @for $i from 1 through $num-plat {
       &--num#{$i} {
         animation-delay: $anim-delay * $i;
+      }
+    }
+    &--animation {
+      padding: 1.4rem 2.7rem 1.4rem 1.2rem;
+      height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.7rem;
+      .menu__plat--selection {
+        opacity: 0;
+      }
+      &:active,
+      &:hover {
+        animation: decalage $anim-dur both;
+        .menu__plat--selection {
+          animation: coche $anim-dur both;
+          opacity: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 3rem;
+          color: white;
+        }
+        i {
+          animation: rotation $anim-dur both;
+        }
+      }
+      &:not(:hover) {
+        animation: decalage-retour $anim-dur $anim-delay backwards;
+        .menu__plat--selection {
+          animation: coche-retour $anim-dur $anim-delay backwards;
+          transition: opacity $anim-dur $anim-delay;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 3rem;
+          color: white;
+        }
       }
     }
     &:not(:last-child) {
@@ -169,32 +225,6 @@ footer {
       display: inline-block;
       transform-origin: left;
     }
-    &:active,
-    &:hover {
-      animation: decalage $anim-dur both;
-      .menu__plat--selection {
-        animation: coche $anim-dur both;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
-        color: white;
-      }
-      i {
-        animation: rotation $anim-dur both;
-      }
-    }
-    &:not(:hover) {
-      animation: decalage-retour $anim-dur $anim-delay both;
-      .menu__plat--selection {
-        animation: coche-retour $anim-dur $anim-delay both;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
-        color: white;
-      }
-    }
   }
   &__btn {
     display: flex;
@@ -202,5 +232,3 @@ footer {
     padding-top: 5.5rem;
   }
 }
-
-

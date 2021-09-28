@@ -13,7 +13,7 @@
   .fa-utensils {
     color: $color-1;
     font-size: 7rem;
-    animation: scale 450ms ease-in-out infinite alternate-reverse;
+    animation: scale 600ms ease-in-out infinite alternate-reverse;
   }
 }
 
@@ -69,9 +69,6 @@
     border-radius: 2.5rem;
     box-shadow: $shadow;
     position: relative;
-    @media screen and (min-width: 1200px) {
-      width: 30%;
-    }
     &:last-child .fas {
       color: $color-1;
     }
@@ -97,26 +94,28 @@
     }
   }
 }
-@media screen and (min-width: 1000px) {
-  .fonctionnement__cases {
+@media screen and (min-width: $big-screen) {
+  /*.fonctionnement__cases {
     display: flex;
     justify-content: space-between;
-  }
+    .fonctionnement__vignette {
+      width: 30%;
+    }
+  }*/
   .restos {
     &__cases {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    a {
+    .restos__vignette {
       width: 49%;
-    }
-    &__vignette {
-      width: 100%;
+      &:last-child {
+        margin-bottom: 2rem;
+      }
     }
   }
 }
-
 
 .restos {
   padding: 7rem 2rem;
@@ -203,6 +202,6 @@
     }
   }
 }
-a:not(:last-child) .restos__vignette {
+.restos__vignette:not(:last-child) {
   margin-bottom: 2rem;
 }

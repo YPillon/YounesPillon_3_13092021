@@ -1,4 +1,5 @@
 /*section "Menu"*/
+/*Responsive design*/
 @keyframes plat {
   0% {
     transform: translateY(3rem);
@@ -195,6 +196,9 @@ footer {
   background-color: #353535;
   color: white;
 }
+footer a {
+  color: white;
+}
 footer img {
   filter: invert(100%);
   width: 12rem;
@@ -245,6 +249,25 @@ footer ul .fa-hands-helping {
   background-position: top;
 }
 
+@media screen and (min-width: 700px) {
+  .img-princ {
+    height: 40rem;
+  }
+  .img-princ--palette {
+    background-size: 100%;
+    background-position: center;
+  }
+  .img-princ--note {
+    background-position: center 60%;
+  }
+  .img-princ--francaise {
+    background-position: center 65%;
+  }
+  .img-princ--delice {
+    background-size: cover;
+    background-position: center 80%;
+  }
+}
 .menu {
   background-color: #f6f6f6;
   border-top-left-radius: 5rem;
@@ -283,16 +306,9 @@ footer ul .fa-hands-helping {
   top: 2.9rem;
 }
 .menu__plat {
-  height: 5rem;
   width: auto;
-  padding: 1.4rem 2.7rem 1.4rem 1.2rem;
   border-radius: 1.7rem;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
   box-shadow: 2px 2px 10px #c3c3c3;
   animation: plat 600ms cubic-bezier(0, 0, 0.42, 0.99) both;
   cursor: pointer;
@@ -308,6 +324,46 @@ footer ul .fa-hands-helping {
 }
 .menu__plat--num4 {
   animation-delay: 800ms;
+}
+.menu__plat--animation {
+  padding: 1.4rem 2.7rem 1.4rem 1.2rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.7rem;
+}
+.menu__plat--animation .menu__plat--selection {
+  opacity: 0;
+}
+.menu__plat--animation:active, .menu__plat--animation:hover {
+  animation: decalage 600ms both;
+}
+.menu__plat--animation:active .menu__plat--selection, .menu__plat--animation:hover .menu__plat--selection {
+  animation: coche 600ms both;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+}
+.menu__plat--animation:active i, .menu__plat--animation:hover i {
+  animation: rotation 600ms both;
+}
+.menu__plat--animation:not(:hover) {
+  animation: decalage-retour 600ms 200ms backwards;
+}
+.menu__plat--animation:not(:hover) .menu__plat--selection {
+  animation: coche-retour 600ms 200ms backwards;
+  transition: opacity 600ms 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
 }
 .menu__plat:not(:last-child) {
   margin-bottom: 2rem;
@@ -348,31 +404,6 @@ footer ul .fa-hands-helping {
   display: inline-block;
   transform-origin: left;
 }
-.menu__plat:active, .menu__plat:hover {
-  animation: decalage 600ms both;
-}
-.menu__plat:active .menu__plat--selection, .menu__plat:hover .menu__plat--selection {
-  animation: coche 600ms both;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  color: white;
-}
-.menu__plat:active i, .menu__plat:hover i {
-  animation: rotation 600ms both;
-}
-.menu__plat:not(:hover) {
-  animation: decalage-retour 600ms 200ms both;
-}
-.menu__plat:not(:hover) .menu__plat--selection {
-  animation: coche-retour 600ms 200ms both;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  color: white;
-}
 .menu__btn {
   display: flex;
   justify-content: center;
@@ -394,7 +425,7 @@ footer ul .fa-hands-helping {
 .load .fa-utensils {
   color: #9356DC;
   font-size: 7rem;
-  animation: scale 450ms ease-in-out infinite alternate-reverse;
+  animation: scale 600ms ease-in-out infinite alternate-reverse;
 }
 
 .localisation {
@@ -451,11 +482,6 @@ footer ul .fa-hands-helping {
   box-shadow: 2px 2px 10px #c3c3c3;
   position: relative;
 }
-@media screen and (min-width: 1200px) {
-  .fonctionnement__vignette {
-    width: 30%;
-  }
-}
 .fonctionnement__vignette:last-child .fas {
   color: #9356DC;
 }
@@ -480,22 +506,24 @@ footer ul .fa-hands-helping {
   left: -1.3rem;
 }
 
-@media screen and (min-width: 1000px) {
-  .fonctionnement__cases {
+@media screen and (min-width: 700px) {
+  /*.fonctionnement__cases {
     display: flex;
     justify-content: space-between;
-  }
-
+    .fonctionnement__vignette {
+      width: 30%;
+    }
+  }*/
   .restos__cases {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .restos a {
+  .restos .restos__vignette {
     width: 49%;
   }
-  .restos__vignette {
-    width: 100%;
+  .restos .restos__vignette:last-child {
+    margin-bottom: 2rem;
   }
 }
 .restos {
@@ -583,7 +611,7 @@ footer ul .fa-hands-helping {
   opacity: 1;
 }
 
-a:not(:last-child) .restos__vignette {
+.restos__vignette:not(:last-child) {
   margin-bottom: 2rem;
 }
 
