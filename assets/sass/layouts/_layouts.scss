@@ -1,3 +1,9 @@
+@media screen and (min-width: $big-screen) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 header {
   height: 7rem;
   text-align: center;
@@ -111,10 +117,10 @@ footer {
       justify-content: space-between;
     }
     &__assortiment {
-      width: 48%;
-      &:not(:last-child) {
+      width: 32%;
+      /*&:not(:last-child) {
         margin-bottom: 4rem;
-      }
+      }*/
     }
   }
   &__titre {

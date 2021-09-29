@@ -1,5 +1,11 @@
 /*Page d'accueil*/
 
+@media screen and (min-width: $big-screen) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 .load {
   background-color: white;
   width: 100%;
@@ -69,8 +75,11 @@
     border-radius: 2.5rem;
     box-shadow: $shadow;
     position: relative;
-    &:last-child {
+    transition: all $anim-dur ease-in-out;
+    &:hover {
       background-color: #9256dc5d;
+    }
+    &:last-child {
       .fas {
         color: $color-1;
       }
@@ -97,21 +106,6 @@
     }
   }
 }
-@media screen and (min-width: $big-screen) {
-  .restos {
-    &__cases {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .restos__vignette {
-      width: 49%;
-      &:last-child {
-        margin-bottom: 2rem;
-      }
-    }
-  }
-}
 
 .restos {
   padding: 7rem 2rem;
@@ -123,6 +117,9 @@
     border-radius: 2rem;
     overflow: hidden;
     box-shadow: $shadow;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
     &__img {
       width: 100%;
       height: 20rem;
@@ -198,6 +195,19 @@
     }
   }
 }
-.restos__vignette:not(:last-child) {
-  margin-bottom: 2rem;
+
+@media screen and (min-width: $big-screen) and (max-width: 1500px) {
+  .restos {
+    &__cases {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__vignette {
+      width: 24%;
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
 }

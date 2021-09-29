@@ -169,6 +169,11 @@ a {
   padding: 1.8rem 5.5rem;
 }
 
+@media screen and (min-width: 700px) {
+  .container {
+    max-width: 100%;
+  }
+}
 header {
   height: 7rem;
   text-align: center;
@@ -283,10 +288,10 @@ footer ul .fa-hands-helping {
     justify-content: space-between;
   }
   .menu__assortiment {
-    width: 48%;
-  }
-  .menu__assortiment:not(:last-child) {
-    margin-bottom: 4rem;
+    width: 32%;
+    /*&:not(:last-child) {
+      margin-bottom: 4rem;
+    }*/
   }
 }
 .menu__titre {
@@ -424,6 +429,11 @@ footer ul .fa-hands-helping {
 }
 
 /*Page d'accueil*/
+@media screen and (min-width: 700px) {
+  .container {
+    max-width: 100%;
+  }
+}
 .load {
   background-color: white;
   width: 100%;
@@ -494,8 +504,9 @@ footer ul .fa-hands-helping {
   border-radius: 2.5rem;
   box-shadow: 2px 2px 10px #c3c3c3;
   position: relative;
+  transition: all 600ms ease-in-out;
 }
-.fonctionnement__vignette:last-child {
+.fonctionnement__vignette:hover {
   background-color: #9256dc5d;
 }
 .fonctionnement__vignette:last-child .fas {
@@ -522,19 +533,6 @@ footer ul .fa-hands-helping {
   left: -1.3rem;
 }
 
-@media screen and (min-width: 700px) {
-  .restos__cases {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .restos .restos__vignette {
-    width: 49%;
-  }
-  .restos .restos__vignette:last-child {
-    margin-bottom: 2rem;
-  }
-}
 .restos {
   padding: 7rem 2rem;
   background-color: #f6f6f6;
@@ -546,6 +544,9 @@ footer ul .fa-hands-helping {
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 2px 2px 10px #c3c3c3;
+}
+.restos__vignette:not(:last-child) {
+  margin-bottom: 2rem;
 }
 .restos__vignette__img {
   width: 100%;
@@ -620,10 +621,19 @@ footer ul .fa-hands-helping {
   opacity: 1;
 }
 
-.restos__vignette:not(:last-child) {
-  margin-bottom: 2rem;
+@media screen and (min-width: 700px) and (max-width: 1500px) {
+  .restos__cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restos__vignette {
+    width: 24%;
+  }
+  .restos__vignette:last-child {
+    margin-bottom: 2rem;
+  }
 }
-
 /*.loader {
   height: 100%;
   width: 100%;
