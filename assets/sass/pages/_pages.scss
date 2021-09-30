@@ -1,11 +1,5 @@
 /*Page d'accueil*/
 
-@media screen and (min-width: $big-screen) {
-  .container {
-    max-width: 100%;
-  }
-}
-
 .load {
   background-color: white;
   width: 100%;
@@ -45,6 +39,9 @@
   flex-direction: column;
   align-items: center;
   background-color: $color-fond;
+  @media screen and (min-width: $big-screen) {
+    padding-bottom: 5rem;
+  }
   h2 {
     padding: 0 7rem;
     text-align: center;
@@ -60,6 +57,13 @@
 .fonctionnement {
   padding: 7rem 2rem 7rem 3rem;
   background: white;
+  @media screen and (min-width: $big-screen) {
+    padding: 5rem 2rem 5rem 3rem;
+    &__cases {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   h2 {
     margin-bottom: 4rem;
     margin-left: -1rem;
@@ -76,6 +80,10 @@
     box-shadow: $shadow;
     position: relative;
     transition: all $anim-dur ease-in-out;
+    @media screen and (min-width: $big-screen) {
+      width: 32%;
+      flex-wrap: nowrap;
+    }
     &:hover {
       background-color: #9256dc5d;
     }
@@ -91,9 +99,10 @@
       font-size: 2.5rem;
       color: rgb(78, 77, 77);
       padding-right: 3rem;
+      padding-left: 3rem;
     }
     .bold {
-      padding-right: 6rem;
+      padding-right: 3rem;
     }
     .number {
       padding: 0.4rem 0.9rem;
@@ -181,7 +190,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         position: absolute;
-        bottom: 2.3rem;
+        /*bottom: 2.3rem;*/
+        top: -0.1rem;
         right: -0.1rem;
         font-weight: bold;
         opacity: 0;
@@ -198,6 +208,7 @@
 
 @media screen and (min-width: $big-screen) and (max-width: 1500px) {
   .restos {
+    padding: 5rem 2rem;
     &__cases {
       display: flex;
       flex-wrap: wrap;

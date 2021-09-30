@@ -171,7 +171,8 @@ a {
 
 @media screen and (min-width: 700px) {
   .container {
-    max-width: 100%;
+    max-width: 90%;
+    margin: auto;
   }
 }
 header {
@@ -200,6 +201,18 @@ footer {
   padding: 3rem;
   background-color: #353535;
   color: white;
+}
+@media screen and (min-width: 700px) {
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer ul li {
+    padding-left: 4rem;
+  }
 }
 footer a {
   color: white;
@@ -429,11 +442,6 @@ footer ul .fa-hands-helping {
 }
 
 /*Page d'accueil*/
-@media screen and (min-width: 700px) {
-  .container {
-    max-width: 100%;
-  }
-}
 .load {
   background-color: white;
   width: 100%;
@@ -474,6 +482,11 @@ footer ul .fa-hands-helping {
   align-items: center;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 700px) {
+  .en-tete {
+    padding-bottom: 5rem;
+  }
+}
 .en-tete h2 {
   padding: 0 7rem;
   text-align: center;
@@ -488,6 +501,15 @@ footer ul .fa-hands-helping {
 .fonctionnement {
   padding: 7rem 2rem 7rem 3rem;
   background: white;
+}
+@media screen and (min-width: 700px) {
+  .fonctionnement {
+    padding: 5rem 2rem 5rem 3rem;
+  }
+  .fonctionnement__cases {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .fonctionnement h2 {
   margin-bottom: 4rem;
@@ -506,6 +528,12 @@ footer ul .fa-hands-helping {
   position: relative;
   transition: all 600ms ease-in-out;
 }
+@media screen and (min-width: 700px) {
+  .fonctionnement__vignette {
+    width: 32%;
+    flex-wrap: nowrap;
+  }
+}
 .fonctionnement__vignette:hover {
   background-color: #9256dc5d;
 }
@@ -519,9 +547,10 @@ footer ul .fa-hands-helping {
   font-size: 2.5rem;
   color: #4e4d4d;
   padding-right: 3rem;
+  padding-left: 3rem;
 }
 .fonctionnement__vignette .bold {
-  padding-right: 6rem;
+  padding-right: 3rem;
 }
 .fonctionnement__vignette .number {
   padding: 0.4rem 0.9rem;
@@ -610,7 +639,8 @@ footer ul .fa-hands-helping {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  bottom: 2.3rem;
+  /*bottom: 2.3rem;*/
+  top: -0.1rem;
   right: -0.1rem;
   font-weight: bold;
   opacity: 0;
@@ -622,6 +652,9 @@ footer ul .fa-hands-helping {
 }
 
 @media screen and (min-width: 700px) and (max-width: 1500px) {
+  .restos {
+    padding: 5rem 2rem;
+  }
   .restos__cases {
     display: flex;
     flex-wrap: wrap;
